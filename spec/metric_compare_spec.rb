@@ -1,5 +1,11 @@
 require 'metric_compare'
 
+describe 'Init' do
+  it 'makes a comparison' do
+    MetricCompare::Init({}, ['report', 'custom_report'])
+  end
+end
+
 describe 'FlogComparer' do
   it 'makes a comparison' do
     comparison = MetricCompare::FlogComparer.new('report.yml', 'custom_report.yml')
