@@ -30,12 +30,6 @@ options = process_args
 args = ARGV
 abort '-h or --help for usage' if args.size == 0
 
-repo = MetricCompare::Repository.new
-
-old_file = repo.get_report(args[0])
-
-
-
 
 
 p options
