@@ -56,12 +56,16 @@ module MetricCompare
       raise 'Implemented by child class'
     end
 
+    def render_result
+      raise 'Implemented by child class'
+    end
+
   end
 
   class FlogComparer < Comparer
 
-    def initialize(old_file, new_file)
-      super old_file, new_file, :flog
+    def initialize(old_result, new_result)
+      super old_result, new_result, :flog
     end
 
     def render_result
@@ -80,8 +84,8 @@ module MetricCompare
 
   class ReekComparer < Comparer
 
-    def initialize(old_file, new_file)
-      super old_file, new_file, :reek
+    def initialize(old_result, new_result)
+      super old_result, new_result, :reek
     end
 
     def render_result
@@ -105,8 +109,8 @@ module MetricCompare
   end
 
   class BestPracticeComparer < Comparer
-    def initialize(old_file, new_file)
-      super old_file, new_file, :rails_best_practices
+    def initialize(old_result, new_result)
+      super old_result, new_result, :rails_best_practices
     end
 
     def render_result
