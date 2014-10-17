@@ -12,7 +12,7 @@ module MetricCompare
 
     def compare
       {
-        total: parse_total(@old_result) - parse_total(@new_result),
+        total: parse_total(@new_result) - parse_total(@old_result),
       }
     end
 
@@ -23,5 +23,5 @@ module MetricCompare
     end
 
   end
-  
+
 end
