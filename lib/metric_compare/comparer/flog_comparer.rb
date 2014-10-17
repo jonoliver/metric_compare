@@ -13,8 +13,8 @@ module MetricCompare
 
     def compare
       {
-        total: @old_result[:total] - @new_result[:total],
-        average: @old_result[:average] - @new_result[:average],
+        total: @new_result[:total] - @old_result[:total],
+        average: @new_result[:average] - @old_result[:average],
       }
     end
   end
