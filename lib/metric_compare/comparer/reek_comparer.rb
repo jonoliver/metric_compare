@@ -13,7 +13,7 @@ module MetricCompare
 
     def compare
       {
-        total: total_smells(@old_result) - total_smells(@new_result),
+        total: total_smells(@new_result) - total_smells(@old_result),
       }
     end
 
