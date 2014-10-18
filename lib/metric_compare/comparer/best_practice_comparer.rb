@@ -6,14 +6,23 @@ module MetricCompare
     end
 
     def render_result
-      render_header @type
-      render_line("Errors",  @result[:total], @result[:total] <= 0)
+      if total
+        render_header @type
+        render_line("Errors",  @result[:total], @result[:total] <= 0)
+      end
     end
 
     def compare
       {
-        total: parse_total(@new_result) - parse_total(@old_result),
+        total: total,
       }
+    end
+
+    private
+
+    def total
+      total = parse_total(@new_result) - parse_total(@old_result)
+      (total == 0) ? nil : total
     end
 
     def parse_total(result)
