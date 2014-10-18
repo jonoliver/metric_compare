@@ -1,6 +1,6 @@
 module MetricCompare
 
-  class BestPracticeComparer < Comparer
+  class RailsBestPracticesComparer < Comparer
     def initialize(old_result, new_result)
       super old_result, new_result, :rails_best_practices
     end

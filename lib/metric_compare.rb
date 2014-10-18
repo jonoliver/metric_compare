@@ -9,7 +9,7 @@ require 'repository'
 require 'comparer'
 require 'flog_comparer'
 require 'reek_comparer'
-require 'best_practice_comparer'
+require 'rails_best_practices_comparer'
 
 module MetricCompare
   def self.Init(options, args)
@@ -19,6 +19,6 @@ module MetricCompare
 
     MetricCompare::FlogComparer.new(old_file, new_file).render_result
     MetricCompare::ReekComparer.new(old_file, new_file).render_result
-    MetricCompare::BestPracticeComparer.new(old_file, new_file).render_result
+    MetricCompare::RailsBestPracticesComparer.new(old_file, new_file).render_result
   end
 end
