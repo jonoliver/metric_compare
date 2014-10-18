@@ -4,6 +4,7 @@ $:.unshift File.expand_path("../metric_compare/repository", __FILE__)
 # $:.unshift File.expand_path("../metric_compare/helpers", __FILE__)
 
 require 'version'
+require 'configuration'
 require 'repository'
 require 'comparer'
 require 'flog_comparer'

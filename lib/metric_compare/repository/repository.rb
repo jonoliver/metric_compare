@@ -1,8 +1,11 @@
 module MetricCompare
-  OUTPUT_DIR='tmp/metric_fu/'
   require "yaml"
 
   class Repository
+
+    def initialize
+      @output_dir=MetricCompare.configuration.output_dir
+    end
 
     def get_or_create_report(name)
       return get_report(name) if report_exists? name
@@ -16,7 +19,7 @@ module MetricCompare
     end
 
     def get_report(name)
-      YAML.load_file(OUTPUT_DIR + filename(name))
+      YAML.load_file(@output_dir + filename(name))
     end
 
     def create_report(name)
@@ -43,7 +46,7 @@ module MetricCompare
     end
 
     def report_exists?(name)
-      File.exists?(OUTPUT_DIR + filename(name))
+      File.exists?(@output_dir + filename(name))
     end
 
     def git_commit?(name)
@@ -51,9 +54,6 @@ module MetricCompare
     end
 
     def git_report_exists?(name)
-      puts "[DBG]: !!!"
-      p git_commit?(name)
-      p report_exists?(name)
       git_commit?(name) && report_exists?(full_git_name(name))
     end
 

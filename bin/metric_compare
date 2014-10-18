@@ -43,6 +43,7 @@ end
 
 
 abort "Specify two .yml files to compare" unless args.count == 2
+MetricCompare.configuration.output_dir='tmp/metric_fu/'
 MetricCompare::Init(options, args)
 
 abort 'done'
