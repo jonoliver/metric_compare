@@ -6,9 +6,6 @@
     - :file: lib/tasks/provider_generator.rb
       :method: ProviderGenerator.build_provider_record
       :complexity: '17'
-    - :file: app/controllers/concerns/answers.rb
-      :method: Answers::ClassMethods#answers
-      :complexity: '16'
     :line_style:
     - :line: app/admin/plan.rb:3
       :description: Line contains trailing whitespace

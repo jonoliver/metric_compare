@@ -11,9 +11,9 @@ end
 
 private
 
-def comparison(property)
+def comparison(property=nil)
   result = init_comparer(result(@result1), result(@result2))
-  result[property]
+  property.nil? ? result : result[property]
 end
 
 def result(result)

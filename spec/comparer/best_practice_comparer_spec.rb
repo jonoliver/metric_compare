@@ -6,7 +6,7 @@ describe 'RailsBestPracticesComparer' do
   end
 
   describe 'total' do
-    it 'returns 0 when no results exist' do
+    it 'returns nil when no results exist' do
       expect(comparison(:total)).to eq nil
     end
 
