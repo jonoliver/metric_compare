@@ -29,7 +29,7 @@ describe 'CaneComparer' do
       expect(comparison(:abc_complexity)[:total]).to eq -1
     end
 
-    it 'needs a better test name' do
+    xit 'needs a better test name' do
       @result1 = abc_wrap [
         { file: 'wat_file', method: 'wat_method', complexity: 20 },
         { file: 'wat_file', method: 'wat_method2', complexity: 20 },
@@ -37,7 +37,7 @@ describe 'CaneComparer' do
       @result2 = abc_wrap [file: 'wat_file', method: 'wat_method', complexity: 10]
       expect(comparison(:abc_complexity)[:total]).to eq -2
     end
-    it 'needs a better test name' do
+    xit 'needs a better test name' do
       @result1 = abc_wrap [file: 'wat_file', method: 'wat_method', complexity: 10]
       @result2 = abc_wrap [
         { file: 'wat_file', method: 'wat_method', complexity: 20 },

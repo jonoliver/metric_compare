@@ -7,7 +7,6 @@ module MetricCompare
 
     def render_result
       render_header @type
-      puts "[DBG]: @result #{@result}"
       abc_complexity = @result[:abc_complexity][:total]
       render_line("Total",  abc_complexity, abc_complexity <= 0)
     end
@@ -26,9 +25,6 @@ module MetricCompare
     def abc_complexity_total
       old1 =  @old_result[:violations][:abc_complexity]
       new1 = @new_result[:violations][:abc_complexity]
-      puts "[DBG]: !!!"
-      p old1
-      p new1
       return 0 if old1 == new1
       diff1 = diff_complexity(old1, new1)
       diff2 = diff_complexity(new1, old1)
