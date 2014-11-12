@@ -6,6 +6,7 @@ $:.unshift File.expand_path("../metric_compare/repository", __FILE__)
 require 'version'
 require 'configuration'
 require 'repository'
+require 'git_repository'
 require 'comparer'
 require 'flog_comparer'
 require 'reek_comparer'
@@ -14,7 +15,7 @@ require 'rails_best_practices_comparer'
 
 module MetricCompare
   def self.Init(options, args)
-    repo = MetricCompare::Repository.new
+    repo = GitRepository.new(Repository.new)
     old_file = repo.get_or_create_report(args[0])
     new_file = repo.get_or_create_report(args[1])
 
