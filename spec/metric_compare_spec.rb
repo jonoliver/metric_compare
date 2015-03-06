@@ -1,7 +1,7 @@
-require 'metric_compare'
+require 'spec_helper'
 
 describe 'Init' do
   it 'makes a comparison' do
-    MetricCompare::Init({}, ['report', 'custom_report'])
+    MetricCompare::Init({}, ['report_1', 'report_2'])
   end
 end
