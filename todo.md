@@ -22,3 +22,7 @@
 ## Tests
 
 - Add tests for repo
+
+## Errors
+
+- Gracefully handle and report errors
