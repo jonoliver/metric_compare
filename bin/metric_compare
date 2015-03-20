@@ -17,7 +17,7 @@ def process_args
     opts.on("-g", "--[no-]git", "Specify git hashes for diff") do |v|
       options[:type] = :git
     end
-    opts.on("-d", "--[no-]dir", "Specify output directory") do |v|
+    opts.on("-dDIR", "--dir=DIR", "Specify output directory") do |v|
       options[:dir] = v
     end
 
@@ -31,7 +31,7 @@ end
 
 options = process_args
 args = ARGV
-abort '-h or --help for usage' if args.size == 0
+# abort '-h or --help for usage' if args.size == 0
 
 
 
@@ -45,9 +45,9 @@ end
 
 
 
-abort "Specify two .yml files to compare" unless args.count >= 2
-# MetricCompare.configuration.output_dir = options[:dir]
-# MetricCompare::Init(options, args)
+# abort "Specify two .yml files to compare" unless args.count >= 2
+MetricCompare.configuration.output_dir = options[:dir]
+MetricCompare::Init(options, args)
 
 abort 'done'
 
