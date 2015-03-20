@@ -9,9 +9,12 @@
 
 - No arguments: Compare current HEAD to last commit
 - One argument: Compare current HEAD to argument (using priority searching)
-- Two arguments: Compare both arguments using priority searching
+- Two arguments: Compare both arguments (using priority searching)
 
 ## Report comparisons
 
 - Determine remaining tools to make comparisons on
 - Make comparison reports more granular for specific tools
+
+## Rake tasks
+- Add default rspec task
