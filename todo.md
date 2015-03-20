@@ -18,3 +18,7 @@
 
 ## Rake tasks
 - Add default rspec task
+
+## Tests
+
+- Add tests for repo
