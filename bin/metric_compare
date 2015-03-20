@@ -2,12 +2,12 @@
 # require 'metric_compare'
 require_relative '../lib/metric_compare.rb'
 
-
 def process_args
   require 'optparse'
 
   options = {
-    type: :file
+    type: :file,
+    dir: 'tmp/metric_fu/'
   }
   OptionParser.new do |opts|
     opts.banner = "Usage: metric_compare [options]"
@@ -16,6 +16,9 @@ def process_args
     end
     opts.on("-g", "--[no-]git", "Specify git hashes for diff") do |v|
       options[:type] = :git
+    end
+    opts.on("-d", "--[no-]dir", "Specify output directory") do |v|
+      options[:dir] = v
     end
 
   end.parse!
@@ -42,9 +45,9 @@ end
 
 
 
-abort "Specify two .yml files to compare" unless args.count == 2
-MetricCompare.configuration.output_dir='tmp/metric_fu/'
-MetricCompare::Init(options, args)
+abort "Specify two .yml files to compare" unless args.count >= 2
+# MetricCompare.configuration.output_dir = options[:dir]
+# MetricCompare::Init(options, args)
 
 abort 'done'
 
