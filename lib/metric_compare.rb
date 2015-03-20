@@ -1,16 +1,6 @@
-$:.unshift File.expand_path("../metric_compare", __FILE__)
-$:.unshift File.expand_path("../metric_compare/comparer", __FILE__)
-$:.unshift File.expand_path("../metric_compare/repository", __FILE__)
-# $:.unshift File.expand_path("../metric_compare/helpers", __FILE__)
-
-require 'version'
-require 'configuration'
-require 'repository'
-require 'comparer'
-require 'flog_comparer'
-require 'reek_comparer'
-require 'cane_comparer'
-require 'rails_best_practices_comparer'
+Gem.find_files("metric_compare/helpers/*.rb").each { |path| require path }
+Gem.find_files("metric_compare/*.rb").each { |path| require path }
+Gem.find_files("metric_compare/**/*.rb").each { |path| require path }
 
 module MetricCompare
   def self.Init(options, args)

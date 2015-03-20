@@ -1,5 +1,3 @@
-require 'helpers/renderable'
-
 module MetricCompare
 
   class Comparer
