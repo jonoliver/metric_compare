@@ -49,18 +49,5 @@ end
 MetricCompare.configuration.output_dir = options[:dir]
 MetricCompare::Init(options, args)
 
+# TODO: change from abort
 abort 'done'
-
-
-
-# MetricCompare::Init(ARGV[0], ARGV[1])
-
-
-# `git branch -D tmp_metric_compare`
-# `git checkout -b tmp_metric_compare`
-# `git branch -D tmp_metric_compare`
-# branch = `git rev-parse --abbrev-ref HEAD`
-#
-# `git checkout #{ARGV[0]}`
-# puts `git rev-parse --abbrev-ref HEAD`
-# `git checkout #{branch}`
