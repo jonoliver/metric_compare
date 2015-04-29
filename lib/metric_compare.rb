@@ -6,16 +6,16 @@ module MetricCompare
   def self.Init(options, args)
     reports = self.get_reports args
 
-    MetricCompare::FlogComparer.new(reports[0], reports[1]).render_result
-    MetricCompare::ReekComparer.new(reports[0], reports[1]).render_result
-    MetricCompare::CaneComparer.new(reports[0], reports[1]).render_result
-    MetricCompare::RailsBestPracticesComparer.new(reports[0], reports[1]).render_result
+    FlogComparer.new(reports[0], reports[1]).render_result
+    ReekComparer.new(reports[0], reports[1]).render_result
+    CaneComparer.new(reports[0], reports[1]).render_result
+    RailsBestPracticesComparer.new(reports[0], reports[1]).render_result
   end
   
   # returns an array of reports: [old_report, new_report]
   def self.get_reports args_array
-    include MetricCompare::Git
-    repo = MetricCompare::Repository.new
+    include Git
+    repo = Repository.new
     reports = []
     
     case args_array.size
