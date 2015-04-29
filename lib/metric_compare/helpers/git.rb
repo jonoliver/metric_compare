@@ -8,8 +8,16 @@ module MetricCompare
       commit_hash_for_step 1
     end
     
-    def git_commit?(name)
+    def self.commit?(name)
       `git cat-file -t #{name}`.strip == 'commit'
+    end
+    
+    def self.full_commit_hash(name)
+      `git rev-parse #{name}`.strip
+    end
+    
+    def self.checkout(name)
+      `git checkout #{name}`
     end
     
     # give me the hash for this step(0=current HEAD)
