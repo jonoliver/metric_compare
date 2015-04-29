@@ -5,11 +5,8 @@
 - If commit exists, check for file name with full commit SHA
   - If no report exists, check out git commit, run report, save report name as full commit sha
 
-## Argument parsing
-
-- No arguments: Compare current HEAD to last commit
-- One argument: Compare current HEAD to argument (using priority searching)
-- Two arguments: Compare both arguments (using priority searching)
+## Repo
+ - Move git stuff into git module
 
 ## Report comparisons
 

@@ -14,7 +14,7 @@ module MetricCompare
   
   # returns an array of reports: [old_report, new_report]
   def self.get_reports args_array
-    include Git
+    include MetricCompare::Git
     repo = MetricCompare::Repository.new
     reports = []
     
