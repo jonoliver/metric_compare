@@ -24,7 +24,7 @@ module MetricCompare
     end
 
     def create_report(name)
-      puts 'Generating report...'
+      puts "Generating report for #{name}..."
       `metric_fu --format yaml --out #{filename(name)}`
     end
 

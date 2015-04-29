@@ -17,8 +17,8 @@ module MetricCompare
     end
     
     def self.checkout(name)
-      p name
-      `git checkout #{name}`
+      puts "Checking out #{name}" 
+      `git checkout #{name} -q`
     end
     
     def self.clean?
@@ -26,7 +26,7 @@ module MetricCompare
     end
     
     def self.head_short_name
-      `git rev-parse --abbrev-ref HEAD`
+      `git rev-parse --abbrev-ref HEAD`.strip
     end
     
     # give me the hash for this step(0=current HEAD)
