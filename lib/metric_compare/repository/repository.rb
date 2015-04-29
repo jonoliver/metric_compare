@@ -29,7 +29,7 @@ module MetricCompare
     end
 
     def create_report_from_git(name)
-      #TODO: check HEAD state, git status
+      abort 'Make sure your git status is clean before running a comparison' unless Git.clean?
       current_head = `git rev-parse --abbrev-ref HEAD`
       Git.checkout name
       sha = Git.full_commit_hash(name)
