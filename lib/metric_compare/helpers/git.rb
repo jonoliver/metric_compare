@@ -20,6 +20,10 @@ module MetricCompare
       `git checkout #{name}`
     end
     
+    def self.clean?
+      `git status -s`.empty?
+    end
+    
     # give me the hash for this step(0=current HEAD)
     def self.commit_hash_for_step(step=0)
       `git rev-parse HEAD~#{step}`.strip    

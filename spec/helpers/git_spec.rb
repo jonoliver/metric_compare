@@ -9,6 +9,5 @@ describe MetricCompare::Git do
   it 'gets the sha of the previous commit' do
     expect(MetricCompare::Git).to receive(:commit_hash_for_step).with(1).and_return 'sha1'
     expect(MetricCompare::Git.last_commit).to eq 'sha1'
-  end  
-
+  end
 end
