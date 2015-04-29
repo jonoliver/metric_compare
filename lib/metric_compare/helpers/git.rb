@@ -17,11 +17,16 @@ module MetricCompare
     end
     
     def self.checkout(name)
+      p name
       `git checkout #{name}`
     end
     
     def self.clean?
       `git status -s`.empty?
+    end
+    
+    def self.head_short_name
+      `git rev-parse --abbrev-ref HEAD`
     end
     
     # give me the hash for this step(0=current HEAD)
