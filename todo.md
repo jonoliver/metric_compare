@@ -24,9 +24,6 @@
   - If no report exists, check out git commit, run report, save report name as full commit sha
 
 ## Comparisons still to make
-- Flay
-  - Total score
-  - Score by file
 - Stats
   - Code to test ratio
 - Saikuro
@@ -39,6 +36,8 @@
   - Break out by violation (Abc complexity, style requirements, class comments, more?)(low priority)
 - Flog
   - Complexity score Total, Avg score by file
+- Flay
+  - Score by file
 - Reek
   - Total code smells by file
 - Rails Best Practices

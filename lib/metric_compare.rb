@@ -7,6 +7,7 @@ module MetricCompare
     reports = self.get_reports args
 
     FlogComparer.new(reports[0], reports[1]).render_result
+    FlayComparer.new(reports[0], reports[1]).render_result
     ReekComparer.new(reports[0], reports[1]).render_result
     CaneComparer.new(reports[0], reports[1]).render_result
     RailsBestPracticesComparer.new(reports[0], reports[1]).render_result
