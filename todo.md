@@ -22,3 +22,30 @@
 - If no file is found, check for git commit
 - If commit exists, check for file name with full commit SHA
   - If no report exists, check out git commit, run report, save report name as full commit sha
+
+## Comparisons still to make
+- Flay
+  - Total score
+  - Score by file
+- Stats
+  - Code to test ratio
+- Saikuro
+  - Method complexity
+  - Class complexity
+  - File complexity
+
+## Partial comparisons finished (make more granular)
+- Cane
+  - Break out by violation (Abc complexity, style requirements, class comments, more?)(low priority)
+- Flog
+  - Complexity score Total, Avg score by file
+- Reek
+  - Total code smells by file
+- Rails Best Practices
+
+## Skip (or low priority)
+- Churn
+- Roodi
+  - Warnings by file
+- Hotspots
+  - Hotspots are determined based on the other tools. (Already a compilation)
