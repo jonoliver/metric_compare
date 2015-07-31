@@ -24,8 +24,6 @@
   - If no report exists, check out git commit, run report, save report name as full commit sha
 
 ## Comparisons still to make
-- Stats
-  - Code to test ratio
 - Saikuro
   - Method complexity
   - Class complexity
@@ -41,6 +39,8 @@
 - Reek
   - Total code smells by file
 - Rails Best Practices
+- Stats
+  - Code to test ratio
 
 ## Skip (or low priority)
 - Churn
