@@ -3052,7 +3052,7 @@
 :stats:
   :codeLOC: 1367
   :testLOC: 4002
-  :code_to_test_ratio: 2.9
+  :code_to_test_ratio: 1.8
   :lines:
   - :name: Controllers
     :lines: 563

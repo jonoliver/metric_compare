@@ -10,6 +10,7 @@ module MetricCompare
     FlayComparer.new(reports[0], reports[1]).render_result
     ReekComparer.new(reports[0], reports[1]).render_result
     CaneComparer.new(reports[0], reports[1]).render_result
+    StatsComparer.new(reports[0], reports[1]).render_result
     RailsBestPracticesComparer.new(reports[0], reports[1]).render_result
   end
   
