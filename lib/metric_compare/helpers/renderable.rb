@@ -10,7 +10,7 @@ module MetricCompare
     end
 
     def render_line(title, value, condition)
-      puts "#{title}\t#{color(condition, format_value(value))}"
+      puts value.nil? ? title : "#{title}\t#{color(condition, format_value(value))}"
     end
 
     def format_value(value)
