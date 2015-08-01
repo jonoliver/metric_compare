@@ -1,6 +1,6 @@
-Gem.find_files("metric_compare/helpers/*.rb").each { |path| require path }
-Gem.find_files("metric_compare/*.rb").each { |path| require path }
-Gem.find_files("metric_compare/**/*.rb").each { |path| require path }
+Dir["lib/metric_compare/helpers/*.rb"].each { |path| require path.sub(/^lib\//, '') }
+Dir["lib/metric_compare/*.rb"].each { |path| require path.sub(/^lib\//, '') }
+Dir["lib/metric_compare/**/*.rb"].each { |path| require path.sub(/^lib\//, '') }
 
 module MetricCompare
   def self.Init(options, args)
