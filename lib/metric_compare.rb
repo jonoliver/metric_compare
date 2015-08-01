@@ -11,6 +11,7 @@ module MetricCompare
     ReekComparer.new(reports[0], reports[1]).render_result
     CaneComparer.new(reports[0], reports[1]).render_result
     StatsComparer.new(reports[0], reports[1]).render_result
+    SaikuroComparer.new(reports[0], reports[1]).render_result
     RailsBestPracticesComparer.new(reports[0], reports[1]).render_result
   end
   

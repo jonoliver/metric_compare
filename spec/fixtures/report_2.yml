@@ -3967,7 +3967,7 @@
     :filename: app/models/cost_sharing_reduction.rb
   :classes:
   - :name: ProviderGenerator
-    :complexity: 42
+    :complexity: 32
     :lines: 186
     :defs:
     - :name: ProviderGenerator#self.create
@@ -4019,7 +4019,7 @@
       :complexity: 3
       :lines: 5
   - :name: User
-    :complexity: 22
+    :complexity: 25
     :lines: 108
     :defs:
     - :name: User#self.create_guest
